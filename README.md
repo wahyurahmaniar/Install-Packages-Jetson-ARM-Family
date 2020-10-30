@@ -92,24 +92,32 @@ $ sudo pip3 install -U numpy==1.16.1 future==0.17.1 mock==3.0.5 h5py==2.9.0 kera
 ```
 If you have trouble installing Protobuf, you may take a look at the Protobuf installation part above. If everything's fine, you may proceed. Now, take a look at this https://developer.download.nvidia.com/compute/redist/jp/. You may find a lot of JetPack versions and you need to choose one based on your preference. In this tutorial, I used v411 since it has compatibility with Python 2.7 and Python 3.6 installation. 
 ```
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v411 tensorflow-gpu
+# JetPack 4.4
+# TF-2.x
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.3.1+nv20.10
+# TF-1.15
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 ‘tensorflow<2’
 ```
-If you run into a problem when execute the code above like this:
+
+For JetPack 4.3, if you run into a problem when execute the code above like this:
 ```
 Exception:
 Traceback (most recent call last):
   ...
   File "/usr/share/python-wheels/requests-2.18.4-py2.py3-none-any.whl/requests/models.py", line 935, in raise_for_status
     raise HTTPError(http_error_msg, response=self)
-requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://developer.download.nvidia.com/compute/redist/jp/v411/grpcio/
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://developer.download.nvidia.com/compute/redist/jp/v43/grpcio/
 ```
-then you should download the Tensorflow installation manually. Previously, when I executed this ```sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v411 tensorflow-gpu```, it already collected tensorflow-gpu and showed an output like this:
+then you should download the Tensorflow installation manually. Previously, when I executed this ```sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v43 tensorflow-gpu```, it already collected tensorflow-gpu and showed an output like this:
 ```
 Collecting tensorflow-gpu
-  Downloading https://developer.download.nvidia.com/compute/redist/jp/v411/tensorflow-gpu/tensorflow_gpu-1.13.0rc0+nv19.2-cp36-cp36m-linux_aarch64.whl (204.6MB)
-    100% |████████████████████████████████| 204.6MB 4.6kB/s
+  Downloading https://developer.download.nvidia.com/compute/redist/jp/v43/tensorflow-gpu/tensorflow_gpu-1.15.0+nv20.1-cp36-cp36m-linux_aarch64.whl (217MB)
+    100% |████████████████████████████████| 217MB 4.6kB/s
 ```
-So, I downloaded tensorflow_gpu-1.13.0rc0+nv19.2-cp36-cp36m-linux_aarch64.whl. From the download directory, I ran this inside the terminal:
+So, I downloaded tensorflow_gpu-1.15.0+nv20.1-cp36-cp36m-linux_aarch64.whl. From the download directory, I ran this inside the terminal:
 ```
-$ sudo pip3 install tensorflow_gpu-1.13.0rc0+nv19.2-cp36-cp36m-linux_aarch64.whl
+# TF-1.15
+$ sudo pip3 install tensorflow_gpu-1.15.0+nv20.1-cp36-cp36m-linux_aarch64.whl
+# TF-2.x
+$ sudo pip3 install tensorflow_gpu-2.0.0+nv20.1-cp36-cp36m-linux_aarch64.whl
 ```
