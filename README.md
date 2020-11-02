@@ -18,6 +18,9 @@ $ sudo apt-get install build-essential python-dev python-setuptools libboost-pyt
 ```
 You need to download PyCUDA from https://pypi.org/project/pycuda/#files. In the same directory of your PyCUDA download, run this terminal
 ```
+$ export CUDA_HOME=/usr/local/cuda-10.2 
+$ export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH
+# export PATH=/usr/local/cuda-10.2/bin:$PATH
 $ tar xzvf pycuda-VERSION.tar.gz
 $ cd pycuda-VERSION
 ```
