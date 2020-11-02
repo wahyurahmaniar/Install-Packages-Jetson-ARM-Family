@@ -20,7 +20,7 @@ You need to download PyCUDA from https://pypi.org/project/pycuda/#files. In the 
 ```
 $ export CUDA_HOME=/usr/local/cuda-10.2 
 $ export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH
-# export PATH=/usr/local/cuda-10.2/bin:$PATH
+$ export PATH=/usr/local/cuda-10.2/bin:$PATH
 $ tar xzvf pycuda-VERSION.tar.gz
 $ cd pycuda-VERSION
 ```
