@@ -78,7 +78,7 @@ $ sudo ldconfig
 ## ONNX Installation
 Before proceeding to the ONNX installation, you need to perform Protobuf installation above first since ONNX heavily relies on Protobuf installation.
 ```
-$ sudo pip3 install onnx
+$ sudo pip3 install onnx==1.4.1
 ```
 
 ## Keras Installation
