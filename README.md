@@ -103,7 +103,7 @@ If you have trouble installing Protobuf, you may take a look at the Protobuf ins
 # TF-2.x
 $ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==2.3.1+nv20.10
 # TF-1.15
-$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 ‘tensorflow<2’
+$ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow==tensorflow-1.15.4+nv20.10
 ```
 
 For JetPack 4.3, if you run into a problem when execute the code above like this:
