@@ -78,6 +78,8 @@ $ sudo ldconfig
 ## ONNX Installation
 Before proceeding to the ONNX installation, you need to perform Protobuf installation above first since ONNX heavily relies on Protobuf installation.
 ```
+$ sudo apt-get install python3-pip libprotoc-dev protobuf-compiler
+$ sudo pip3 install pybind11
 $ sudo pip3 install onnx==1.4.1
 ```
 
