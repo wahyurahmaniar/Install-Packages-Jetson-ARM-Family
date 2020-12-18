@@ -16,7 +16,9 @@ $ sudo apt-get install libboost-all-dev
 $ sudo apt-get install python-numpy
 $ sudo apt-get install build-essential python-dev python-setuptools libboost-python-dev libboost-thread-dev
 ```
-You need to download PyCUDA from https://pypi.org/project/pycuda/#files. In the same directory of your PyCUDA download, run this terminal
+You need to download PyCUDA from https://pypi.org/project/pycuda/#files:
+https://files.pythonhosted.org/packages/c8/35/130ac8867b30f9c6ae699b689633a803a73787533f41e52afcf28b75bd81/pycuda-2019.1.1.tar.gz
+In the same directory of your PyCUDA download, run this terminal
 ```
 # JetPack 4.4
 $ export CUDA_HOME=/usr/local/cuda-10.2 
