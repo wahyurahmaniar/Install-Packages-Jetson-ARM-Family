@@ -89,7 +89,7 @@ $ sudo pip3 install onnx==1.4.1
 ```
 $ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev
 $ sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev gfortran
-$ sudo pip3 install scipy
+$ sudo pip3 install scipy==1.5
 $ sudo pip3 install keras
 ```
 
