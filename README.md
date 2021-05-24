@@ -133,6 +133,7 @@ $ sudo pip3 install tensorflow-2.3.1+nv20.10-cp36-cp36m-linux_aarch64.whl
 ```
 ## PyTorch Installation
 ```
+$ sudo apt-get install libopenblas-dev
 $ pip3 install -U future psutil dataclasses typing-extensions pyyaml tqdm seaborn
 $ wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O torch-1.8.0-cp36-cp36m-linux_aarch64.whl 
 $ pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
