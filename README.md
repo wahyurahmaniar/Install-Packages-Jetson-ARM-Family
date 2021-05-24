@@ -89,6 +89,7 @@ $ sudo pip3 install onnx==1.4.1
 ```
 $ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev
 $ sudo apt-get install libblas-dev liblapack-dev libatlas-base-dev gfortran
+$ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev
 $ sudo pip3 install scipy==1.5
 $ sudo pip3 install keras
 ```
@@ -129,4 +130,24 @@ So, I downloaded tensorflow-1.15.4+nv20.10-cp36-cp36m-linux_aarch64.whl. From th
 $ sudo pip3 install tensorflow-1.15.4+nv20.10-cp36-cp36m-linux_aarch64.whl
 # TF-2.x
 $ sudo pip3 install tensorflow-2.3.1+nv20.10-cp36-cp36m-linux_aarch64.whl
+```
+## PyTorch Installation
+```
+$ pip3 install -U future psutil dataclasses typing-extensions pyyaml tqdm seaborn
+$ wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O torch-1.8.0-cp36-cp36m-linux_aarch64.whl 
+$ pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+```
+Test torch cuda:
+```
+$ python3 -c 'import torch; print(torch.cuda.is_available())'
+```
+
+## TorchVision Installation
+```
+$ sudo apt install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+$ pip3 install --upgrade pillow
+$ git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
+$ cd torchvision
+$ export BUILD_VERSION=0.9.0
+$ python3 setup.py install --user
 ```
